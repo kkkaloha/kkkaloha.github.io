@@ -34,14 +34,55 @@
 
 ## 方式二：用 GitHub Actions 自动构建并部署
 
-不想每次本地执行 `npm run build` 再提交 `docs`，可以用 Actions 在每次推送到 `main` 时自动构建并发布。仓库里已包含 `.github/workflows/deploy.yml`。
+不想每次本地执行 `npm run build` 再提交 `docs`，可以用 Actions 在每次推送到 `main` 时自动构建并发布。
 
-1. **在 GitHub 上开启 Pages**
+**注意**：推送或修改 `.github/workflows/*.yml` 需要 PAT 具备 **workflow** 权限。若 push 报错 `refusing to allow a Personal Access Token to create or update workflow ... without workflow scope`，请到 [GitHub → Settings → Developer settings → Personal access tokens](https://github.com/settings/tokens) 给该 Token 勾选 **workflow** 后再推送。
+
+1. 在仓库中创建 **`.github/workflows/deploy.yml`**，内容如下：
+
+   ```yaml
+   name: Deploy to GitHub Pages
+   on:
+     push:
+       branches: [main]
+   permissions:
+     contents: read
+     pages: write
+     id-token: write
+   concurrency:
+     group: pages
+     cancel-in-progress: true
+   jobs:
+     build:
+       runs-on: ubuntu-latest
+       steps:
+         - uses: actions/checkout@v4
+         - uses: actions/setup-node@v4
+           with:
+             node-version: 20
+             cache: 'npm'
+         - run: npm ci
+         - run: npm run build
+         - uses: actions/upload-pages-artifact@v3
+           with:
+             path: docs
+     deploy:
+       needs: build
+       runs-on: ubuntu-latest
+       environment:
+         name: github-pages
+         url: ${{ steps.deploy.outputs.page_url }}
+       steps:
+         - id: deploy
+           uses: actions/deploy-pages@v4
+   ```
+
+2. **在 GitHub 上开启 Pages**
    - 打开：**https://github.com/kkkaloha/kkkaloha.github.io/settings/pages**
    - **Source** 选：**GitHub Actions**
    - 保存后，每次推送到 `main` 会自动构建并部署，访问 **https://kkkaloha.github.io**。
 
-2. **推送代码**  
+3. **推送代码**（需 PAT 有 workflow 权限）  
    推送后到 **Actions** 页可查看构建与部署状态。
 
 ---
