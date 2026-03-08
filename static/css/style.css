@@ -1,0 +1,115 @@
+:root {
+  --bg: #0f0f12;
+  --surface: #18181c;
+  --border: #2a2a32;
+  --text: #e4e4e7;
+  --muted: #71717a;
+  --accent: #22c55e;
+  --accent-hover: #16a34a;
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+#root, .main {
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.logo:hover { color: var(--accent); }
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover, .nav a.active { color: var(--accent); }
+
+.main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home .hero h1 { margin: 0 0 0.5rem; }
+.home .content a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.home .content a:hover { text-decoration: underline; }
+.home .content ul { margin: 1rem 0; padding-left: 1.5rem; }
+
+.page h1, .single h1 { margin: 0 0 1rem; font-size: 1.75rem; }
+.page .content, .single .content { margin-bottom: 1.5rem; color: var(--muted); font-size: 0.95rem; }
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.list a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+.list a:hover { color: var(--accent); }
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background: rgba(34, 197, 94, 0.2);
+  color: var(--accent);
+  border-radius: 4px;
+}
+.cat { font-size: 0.75rem; color: var(--accent); }
+.tag {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.4rem;
+  background: var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+}
+.meta { font-size: 0.85rem; color: var(--muted); margin-left: auto; }
+
+.single .badge { display: inline-block; margin-bottom: 0.5rem; }
+.single .meta-line { margin-bottom: 0.5rem; }
+.single .meta-line .cat, .single .meta-line .tag { margin-right: 0.5rem; }
+.single .content { color: var(--text); font-size: 1rem; }
+.single .content h2 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; }

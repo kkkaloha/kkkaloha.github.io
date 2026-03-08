@@ -1,0 +1,18 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<article class="single">
+  {{ with .Param "categories" }}
+    <div class="meta-line">
+      {{ range . }}<span class="cat">{{ . }}</span>{{ end }}
+    </div>
+  {{ end }}
+  {{ with .Param "tags" }}
+    <div class="meta-line">
+      {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+    </div>
+  {{ end }}
+  <h1>{{ .Title }}</h1>
+  {{ with .PublishDate }}<p class="meta">{{ .Format "2006-01-02" }}</p>{{ end }}
+  <div class="content">{{ .Content }}</div>
+</article>
+{{ end }}

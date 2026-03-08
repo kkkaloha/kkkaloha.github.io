@@ -1,0 +1,14 @@
+baseURL = 'https://kkkaloha.github.io/'
+languageCode = 'zh-CN'
+title = 'kkkaloha - 个人主页'
+# 未使用主题，使用项目内 layouts/ 与 static/
+
+# GitHub Pages 发布到 docs 时使用
+publishDir = 'docs'
+
+[params]
+  description = '个人主页 · 简历与知识库'
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'

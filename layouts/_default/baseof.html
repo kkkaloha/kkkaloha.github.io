@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+  <header class="header">
+    <a href="{{ .Site.BaseURL }}" class="logo">{{ .Site.Title }}</a>
+    <nav class="nav">
+      <a href="{{ .Site.BaseURL }}">首页</a>
+      <a href="{{ "resumes/" | relURL }}">简历</a>
+      <a href="{{ "knowledge/" | relURL }}">知识库</a>
+    </nav>
+  </header>
+  <main class="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+</body>
+</html>
