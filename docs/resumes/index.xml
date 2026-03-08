@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>简历 on kkkaloha - 个人主页</title>
-    <link>http://localhost:1313/resumes/</link>
+    <link>https://kkkaloha.github.io/resumes/</link>
     <description>Recent content in 简历 on kkkaloha - 个人主页</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/resumes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kkkaloha.github.io/resumes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>前端开发工程师简历</title>
-      <link>http://localhost:1313/resumes/frontend-sample/</link>
+      <link>https://kkkaloha.github.io/resumes/frontend-sample/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/resumes/frontend-sample/</guid>
+      <guid>https://kkkaloha.github.io/resumes/frontend-sample/</guid>
       <description>&lt;h2 id=&#34;教育背景&#34;&gt;教育背景&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;xxx 大学 · 计算机相关&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;技能&#34;&gt;技能&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;HTML / CSS / JavaScript&lt;/li&gt;&#xA;&lt;li&gt;React / Vue&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;项目经历&#34;&gt;项目经历&lt;/h2&gt;&#xA;&lt;p&gt;（在此用 Markdown 填写）&lt;/p&gt;</description>
     </item>
   </channel>
