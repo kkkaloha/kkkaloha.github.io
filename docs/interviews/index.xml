@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>面试 on kkkaloha - 个人主页</title>
+    <link>http://localhost:1313/interviews/</link>
+    <description>Recent content in 面试 on kkkaloha - 个人主页</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 01 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/interviews/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>某公司 - 前端开发</title>
+      <link>http://localhost:1313/interviews/sample/</link>
+      <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/interviews/sample/</guid>
+      <description>&lt;h2 id=&#34;投递渠道&#34;&gt;投递渠道&lt;/h2&gt;&#xA;&lt;p&gt;官网 / 内推&lt;/p&gt;&#xA;&lt;h2 id=&#34;面试进度&#34;&gt;面试进度&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;简历已投&lt;/li&gt;&#xA;&lt;li&gt;一面时间待定&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;备注&#34;&gt;备注&lt;/h2&gt;&#xA;&lt;p&gt;（面试题、复盘等写在此处）&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

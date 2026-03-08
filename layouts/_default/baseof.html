@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
   <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
 <body>
@@ -12,12 +15,34 @@
     <a href="{{ .Site.BaseURL }}" class="logo">{{ .Site.Title }}</a>
     <nav class="nav">
       <a href="{{ .Site.BaseURL }}">首页</a>
-      <a href="{{ "resumes/" | relURL }}">简历</a>
+      <a href="{{ "resumes/" | relURL }}" class="admin-only">简历</a>
+      <a href="{{ "interviews/" | relURL }}">面试</a>
       <a href="{{ "knowledge/" | relURL }}">知识库</a>
+      <button type="button" class="btn-admin-login" id="adminLoginBtn" aria-label="管理员登录">管理员登录</button>
+      <button type="button" class="btn-admin-logout" id="adminLogoutBtn" style="display:none;">退出管理员</button>
     </nav>
   </header>
   <main class="main">
     {{ block "main" . }}{{ end }}
   </main>
+
+  <!-- 管理员登录弹窗 -->
+  <div class="admin-modal" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminModalTitle" aria-hidden="true">
+    <div class="admin-modal-backdrop" id="adminModalBackdrop"></div>
+    <div class="admin-modal-content">
+      <h2 class="admin-modal-title" id="adminModalTitle">管理员登录</h2>
+      <form class="admin-login-form" id="adminLoginForm">
+        <label for="adminPassword" class="admin-form-label">请输入口令</label>
+        <input type="password" id="adminPassword" class="admin-form-input" autocomplete="off" placeholder="口令" required>
+        <p class="admin-form-error" id="adminFormError" role="alert"></p>
+        <div class="admin-form-actions">
+          <button type="button" class="admin-btn admin-btn-secondary" id="adminModalCancel">取消</button>
+          <button type="submit" class="admin-btn admin-btn-primary">登录</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="{{ "js/admin-auth.js" | relURL }}"></script>
 </body>
 </html>

@@ -1,9 +1,21 @@
 {{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
 {{ define "main" }}
+{{ if eq .Section "resumes" }}
+<p class="admin-gate-msg">仅管理员可查看简历。</p>
+<div class="admin-only-block">
+  <article class="single">
+    {{ with .Param "direction" }}<span class="badge">{{ . }}</span>{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .PublishDate }}<p class="meta">{{ .Format "2006-01-02" }}</p>{{ end }}
+    <div class="content">{{ .Content }}</div>
+  </article>
+</div>
+{{ else }}
 <article class="single">
   {{ with .Param "direction" }}<span class="badge">{{ . }}</span>{{ end }}
   <h1>{{ .Title }}</h1>
   {{ with .PublishDate }}<p class="meta">{{ .Format "2006-01-02" }}</p>{{ end }}
   <div class="content">{{ .Content }}</div>
 </article>
+{{ end }}
 {{ end }}

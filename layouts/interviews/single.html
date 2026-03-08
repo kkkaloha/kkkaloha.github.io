@@ -1,0 +1,11 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<article class="single">
+  {{ with .Param "company" }}<p class="meta-line"><strong>公司</strong> {{ . }}</p>{{ end }}
+  {{ with .Param "position" }}<p class="meta-line"><strong>岗位</strong> {{ . }}</p>{{ end }}
+  {{ with .Param "status" }}<p class="meta-line"><strong>状态</strong> <span class="badge badge-status">{{ . }}</span></p>{{ end }}
+  {{ with .PublishDate }}<p class="meta-line"><strong>日期</strong> {{ .Format "2006-01-02" }}</p>{{ end }}
+  <h1>{{ .Title }}</h1>
+  <div class="content">{{ .Content }}</div>
+</article>
+{{ end }}

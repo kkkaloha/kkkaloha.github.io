@@ -1,16 +1,19 @@
 {{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
 {{ define "main" }}
-<article class="page">
-  <h1>{{ .Title }}</h1>
-  <div class="content">{{ .Content }}</div>
-  <ul class="list resumes-list">
-    {{ range .Pages }}
-    <li>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{ with .Param "direction" }}<span class="badge">{{ . }}</span>{{ end }}
-      {{ with .PublishDate }}<span class="meta">{{ .Format "2006-01-02" }}</span>{{ end }}
-    </li>
-    {{ end }}
-  </ul>
-</article>
+<p class="admin-gate-msg">仅管理员可查看简历。</p>
+<div class="admin-only-block">
+  <article class="page">
+    <h1>{{ .Title }}</h1>
+    <div class="content">{{ .Content }}</div>
+    <ul class="list resumes-list">
+      {{ range .Pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ with .Param "direction" }}<span class="badge">{{ . }}</span>{{ end }}
+        {{ with .PublishDate }}<span class="meta">{{ .Format "2006-01-02" }}</span>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </article>
+</div>
 {{ end }}

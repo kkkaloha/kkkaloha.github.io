@@ -2,37 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kkkaloha.github.io/categories/</loc>
+    <loc>http://localhost:1313/interviews/sample/</loc>
+    <lastmod>2024-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/interviews/</loc>
+    <lastmod>2024-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kkkaloha.github.io/tags/hooks/</loc>
+    <loc>http://localhost:1313/tags/hooks/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kkkaloha.github.io/tags/react/</loc>
+    <loc>http://localhost:1313/tags/react/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kkkaloha.github.io/knowledge/react-hooks/</loc>
+    <loc>http://localhost:1313/knowledge/react-hooks/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kkkaloha.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kkkaloha.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kkkaloha.github.io/resumes/frontend-sample/</loc>
+    <loc>http://localhost:1313/resumes/frontend-sample/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kkkaloha.github.io/categories/%E6%A1%86%E6%9E%B6%E4%B8%8E%E5%B7%A5%E5%85%B7/</loc>
+    <loc>http://localhost:1313/categories/%E6%A1%86%E6%9E%B6%E4%B8%8E%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kkkaloha.github.io/knowledge/</loc>
+    <loc>http://localhost:1313/knowledge/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kkkaloha.github.io/resumes/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kkkaloha.github.io/</loc>
+    <loc>http://localhost:1313/resumes/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url>
 </urlset>

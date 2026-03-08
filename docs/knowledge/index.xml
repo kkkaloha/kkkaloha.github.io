@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>知识库 on kkkaloha - 个人主页</title>
-    <link>https://kkkaloha.github.io/knowledge/</link>
+    <link>http://localhost:1313/knowledge/</link>
     <description>Recent content in 知识库 on kkkaloha - 个人主页</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://kkkaloha.github.io/knowledge/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/knowledge/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>React Hooks 用法</title>
-      <link>https://kkkaloha.github.io/knowledge/react-hooks/</link>
+      <link>http://localhost:1313/knowledge/react-hooks/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://kkkaloha.github.io/knowledge/react-hooks/</guid>
+      <guid>http://localhost:1313/knowledge/react-hooks/</guid>
       <description>&lt;h2 id=&#34;usestate&#34;&gt;useState&lt;/h2&gt;&#xA;&lt;p&gt;用于在函数组件中维护状态。&lt;/p&gt;&#xA;&lt;h2 id=&#34;useeffect&#34;&gt;useEffect&lt;/h2&gt;&#xA;&lt;p&gt;处理副作用，如请求数据、订阅等。&lt;/p&gt;&#xA;&lt;p&gt;（在此用 Markdown 继续写笔记）&lt;/p&gt;</description>
     </item>
   </channel>
